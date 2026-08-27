@@ -11,7 +11,7 @@ class Justray < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/luynrs/justray/releases/download/v1.0.1/justray_1.0.1_darwin_amd64.tar.gz"
-      sha256 "83680749c44532afafcc719ab233ac686447c697aad4539cac549877e8b5daad"
+      sha256 "4a6dfb1909e8a568d375824b7b09e21b7f86f808718c488594786903361f28a4"
 
       define_method(:install) do
         bin.install "justray"
@@ -21,7 +21,7 @@ class Justray < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/luynrs/justray/releases/download/v1.0.1/justray_1.0.1_darwin_arm64.tar.gz"
-      sha256 "92844ea9651d7a373de6cb390e208ce3680864b5c6ae8402f1941d63dac9f1fd"
+      sha256 "0762cbbb4ec73b66e3744519d290d8306dfda6173224671f6ccf22c24831f265"
 
       define_method(:install) do
         bin.install "justray"
@@ -34,7 +34,7 @@ class Justray < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/luynrs/justray/releases/download/v1.0.1/justray_1.0.1_linux_amd64.tar.gz"
-      sha256 "1a360924c5f1cd4f9abc6bdd9b097879ced5c7f2829962c4ed240916b5245770"
+      sha256 "2c3b5e886b3193722e90ddc04116187835bed9da070b38413a0685f540192b01"
       define_method(:install) do
         bin.install "justray"
         bin.install "justrayd"
@@ -43,7 +43,7 @@ class Justray < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/luynrs/justray/releases/download/v1.0.1/justray_1.0.1_linux_arm64.tar.gz"
-      sha256 "672770ca57566fc1450345dc445a9d7f7647765f86347a338e536cfe8aac1f92"
+      sha256 "dfa2f85949db46aa334c7a05369dbcbd6f72dfef8be9970d5adead1b7fa6f0b2"
       define_method(:install) do
         bin.install "justray"
         bin.install "justrayd"
