@@ -5,13 +5,13 @@
 class Justray < Formula
   desc "A modern VPN client that lives in your terminal"
   homepage "https://github.com/luynrs/justray"
-  version "1.1.3"
+  version "1.2.0"
   license "GPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/luynrs/justray/releases/download/v1.1.3/justray_1.1.3_darwin_amd64.tar.gz"
-      sha256 "09e2deb28fe6861694a8280583e78519ca3ecb8c2cf6d37868dcbf629dada604"
+      url "https://github.com/luynrs/justray/releases/download/v1.2.0/justray_1.2.0_darwin_amd64.tar.gz"
+      sha256 "49548ed4e79101fc9bfdb21289343a3fc4f975e1e48828f235c5e4019dc6a942"
 
       define_method(:install) do
         bin.install "justray"
@@ -20,8 +20,8 @@ class Justray < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/luynrs/justray/releases/download/v1.1.3/justray_1.1.3_darwin_arm64.tar.gz"
-      sha256 "13577ea3de19d2433959fd3716aa6fb49ee6e0e6f9f7ed69d4678f0b8064ed0f"
+      url "https://github.com/luynrs/justray/releases/download/v1.2.0/justray_1.2.0_darwin_arm64.tar.gz"
+      sha256 "bd6991750c9d95683e92c218eab25f19460c81083136cc947f7347d1ea3f9ce2"
 
       define_method(:install) do
         bin.install "justray"
@@ -33,8 +33,8 @@ class Justray < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/luynrs/justray/releases/download/v1.1.3/justray_1.1.3_linux_amd64.tar.gz"
-      sha256 "c5096de3b9e615c1c5544730804add2acbe14cc5ba2e79b431ac023a6589a7f2"
+      url "https://github.com/luynrs/justray/releases/download/v1.2.0/justray_1.2.0_linux_amd64.tar.gz"
+      sha256 "8aa04f18374cafd4be029c7402d20787b225ed54eceaf984e5b86c2104f6c312"
       define_method(:install) do
         bin.install "justray"
         bin.install "justrayd"
@@ -42,8 +42,8 @@ class Justray < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/luynrs/justray/releases/download/v1.1.3/justray_1.1.3_linux_arm64.tar.gz"
-      sha256 "8c9e2d28ebbf6975588e6374426213399f5c3b0b3d4bc9c6adf9b4cbb939b291"
+      url "https://github.com/luynrs/justray/releases/download/v1.2.0/justray_1.2.0_linux_arm64.tar.gz"
+      sha256 "dc5073092eab1e5235b0daa0d8024c8a4d7943db1e765894641f9eccd64bbf43"
       define_method(:install) do
         bin.install "justray"
         bin.install "justrayd"
