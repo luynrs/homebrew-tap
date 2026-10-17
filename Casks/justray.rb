@@ -2,25 +2,25 @@
 cask "justray" do
   binary "justray", target: "jray"
 
-  version "1.7.3"
+  version "1.8.0"
 
   on_macos do
     on_arm do
-      sha256 "b3b5cb3e3d40936d622a85f4e9fca81f9bff0de564727427ebf6f02b7c0ea72c"
+      sha256 "15c6715066363f67e64eec716c53c2dc7aa8fdc3c5e526e9a2cea0c460d489cf"
       url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "f7d245a3155343ba1c17ea5b15f5d6fc633bcf68c81302d17c1c374e1e5a94bc"
+      sha256 "cf67e73461f25f5c8218254dfbb1c26c1739afdc009c4850d3c44150e4292c9a"
       url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "1a5b2d6ec97f0e8fcc2cf7a224aca42974b9798c299d3bb0aa778deedec55d68"
+      sha256 "0f5d7bd4f67b139742ae4b2a11bcec1ff7aaffed85d472e6a986fcf2bc88df61"
       url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "29f8d58752ef3eec4adc5be76a6ad34534d6aa2e07febb98473b919d7b64679e"
+      sha256 "e55cc9a6ecba193022525454fd29f3c80d58599084e9f36e67812d4590b21723"
       url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_linux_amd64.tar.gz"
     end
   end
