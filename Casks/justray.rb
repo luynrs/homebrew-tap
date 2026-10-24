@@ -2,26 +2,26 @@
 cask "justray" do
   binary "justray", target: "jray"
 
-  version "1.8.0"
+  version "1.8.1"
 
   on_macos do
     on_arm do
-      sha256 "15c6715066363f67e64eec716c53c2dc7aa8fdc3c5e526e9a2cea0c460d489cf"
-      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_darwin_arm64.tar.gz"
+      sha256 "09eb201ae18bda83a2c0769e50ed1d9456fbfcf4a11d67f52ec89027fb631cbd"
+      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray-#{version}-macos-arm64.tar.gz"
     end
     on_intel do
-      sha256 "cf67e73461f25f5c8218254dfbb1c26c1739afdc009c4850d3c44150e4292c9a"
-      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_darwin_amd64.tar.gz"
+      sha256 "702c82374e3004687909b1c308b74aba8fc1d2e4d45e9997445ac593e3a3a9e6"
+      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray-#{version}-macos-amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "0f5d7bd4f67b139742ae4b2a11bcec1ff7aaffed85d472e6a986fcf2bc88df61"
-      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_linux_arm64.tar.gz"
+      sha256 "5312da76e133ace8643b03595163e4a489e46a2a3144434294fc693af880d752"
+      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray-#{version}-linux-arm64.tar.gz"
     end
     on_intel do
-      sha256 "e55cc9a6ecba193022525454fd29f3c80d58599084e9f36e67812d4590b21723"
-      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray_#{version}_linux_amd64.tar.gz"
+      sha256 "016775ced205bc9771e659dec3e14fb7dfe6dcb2bc71ae8bc4dd9d9804eddecd"
+      url "https://github.com/luynrs/justray/releases/download/v#{version}/justray-#{version}-linux-amd64.tar.gz"
     end
   end
 
@@ -36,9 +36,9 @@ cask "justray" do
   binary "justray"
   binary "justrayd"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/justray", "#{staged_path}/justrayd"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/justray", "{{staged_path}}/justrayd"]
     end
   end
 
